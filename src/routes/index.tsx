@@ -5,7 +5,7 @@ import { routeLoader$ } from '@builder.io/qwik-city';
 
 
 
-export const useGitUser = routeLoader$(async (requestEvent) => {
+export const useGitUser = routeLoader$(async () => {
   // This code runs only on the server, after every navigation
   const res = await fetch("https://api.github.com/users/pompy");
   const user = await res.json();
